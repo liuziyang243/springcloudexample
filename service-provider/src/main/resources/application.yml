@@ -1,0 +1,17 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: providerplan
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+eureka:
+  instance:
+    prefer-ip-address: true #注册服务的时候使用服务ip地址
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
